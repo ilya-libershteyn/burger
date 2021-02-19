@@ -14,7 +14,7 @@ $(function() {
       data: devouredState
     }).then(
       function() {
-        console.log("changed sleep to", 1);
+        console.log("changed eaten to", true);
         // Reload the page to get the updated list
         location.reload();
       }
@@ -30,9 +30,9 @@ $(function() {
     };
 
     // Send the POST request.
-    $.ajax("/api/burgerss", {
+    $.ajax("/api/burgers", {
       type: "POST",
-      data: newCat
+      data: newBurger
     }).then(
       function() {
         console.log("created new burger");
